@@ -29,6 +29,7 @@ No README, sob o projeto (ex.: `### BRMW`), use um `####` por contribuição com
 8. Bullet **PR** com status *(aberto · aguardando review | mergeado | fechado)* e, se útil, o título oficial do PR
 9. Bullet **Fixes** (issues que o PR declara fechar) e, se houver, **Related** (contexto) — espelhar a fonte oficial (`Fixes` / `Related` no corpo do PR)
 10. Se um PR substituiu outro: bullet **Histórico** com o PR antigo e o motivo (ex.: fechado, não mergeado)
+11. Se o PR empilha sobre outro ainda aberto: bullet **Dependência** com o PR base
 
 Antes de publicar ou atualizar a capa, conferir estado, título, Fixes/Related e autor na **fonte oficial** (`gh pr view` / página do PR no GitHub). Não inventar status.
 

@@ -10,6 +10,7 @@ Este repositório é uma **capa de portfólio**: documenta PRs, issues e context
 
 | Projeto | Stack | Status | Última alteração | Contribuição | Autor |
 |---------|-------|--------|------------------|--------------|-------|
+| BRMW | React 19, TypeScript, JointJS, Webpack | PR aberto (aguardando review) | 22/09/2026 | [#719](https://github.com/brmodeloweb/brmodelo-app/pull/719) | [Mazer](https://github.com/lMazer) (`@lMazer`) |
 | BRMW | React 19, TypeScript, JointJS, Webpack | PR aberto (aguardando review) | 22/09/2026 | [#718](https://github.com/brmodeloweb/brmodelo-app/pull/718) | [Mazer](https://github.com/lMazer) (`@lMazer`) |
 | BRMW | React 19, TypeScript, JointJS, Webpack | PR aberto (aguardando review) | 22/09/2026 | [#717](https://github.com/brmodeloweb/brmodelo-app/pull/717) | [Mazer](https://github.com/lMazer) (`@lMazer`) |
 | BRMW | Angular (legado), Sass, i18n | PR aberto (acompanhamento) | 22/09/2026 | [#669](https://github.com/brmodeloweb/brmodelo-app/pull/669) | [Márcio Carvalho](https://github.com/Marcio-Carvalho27) (`@Marcio-Carvalho27`) |
@@ -21,6 +22,19 @@ Este repositório é uma **capa de portfólio**: documenta PRs, issues e context
 ![Preview BRMW](docs/previews/brmw.png)
 
 Contribuições e acompanhamento ao [brmodelo-app](https://github.com/brmodeloweb/brmodelo-app) (ferramenta livre de modelagem ER usada em cursos de banco de dados). Fonte oficial dos PRs: [`brmodeloweb/brmodelo-app`](https://github.com/brmodeloweb/brmodelo-app).
+
+#### Personalização de campos FK (#569)
+
+Permite nome livre na FK e escolha explícita da coluna PK de origem; corrige o SQL para `REFERENCES` usar a PK real da tabela de origem (não o nome local da FK). Empilhado sobre [#718](https://github.com/brmodeloweb/brmodelo-app/pull/718).
+
+- **Autor:** [Mazer](https://github.com/lMazer) (`@lMazer`)
+- **Stack:** React 19, TypeScript, JointJS (`@joint/core`), Webpack 5, pnpm
+- **Entrega:** Nome customizado da FK + dropdown da PK de origem (`tableOrigin.columnName`); `REFERENCES` correto no DDL; preenchimento na conversão/link manual com fallback para modelos antigos
+- **Destaques técnicos:** `tableOrigin.columnName` no `Column` / `ColumnForm`; sync em `conversor` e `logicEditor`; SQL via PK de origem
+- **Upstream:** [`brmodeloweb/brmodelo-app`](https://github.com/brmodeloweb/brmodelo-app)
+- **PR:** [#719](https://github.com/brmodeloweb/brmodelo-app/pull/719) *(aberto · aguardando review)* — título upstream: *Feat: personalização de campos FK (#569)*
+- **Dependência:** ideal mergear [#718](https://github.com/brmodeloweb/brmodelo-app/pull/718) antes (este PR empilha os commits de tipos parametrizados)
+- **Fixes:** [#569](https://github.com/brmodeloweb/brmodelo-app/issues/569)
 
 #### Tipos de dados parametrizados (#712)
 
